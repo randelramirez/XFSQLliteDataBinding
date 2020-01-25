@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XFSQLliteDataBinding.EditableListView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button
+                Clicked="EditClicked"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Edit Row"
+                VerticalOptions="Fill" />
+            <Button
+                Clicked="DeleteClicked"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Delete Row"
+                VerticalOptions="Fill" />
+            <Button
+                Clicked="ReplaceClicked"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Replace List"
+                VerticalOptions="Fill" />
+            <ListView x:Name="ItemListView" ItemTapped="ListItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Detail="{Binding Description}" Text="{Binding Title}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XFSQLliteDataBinding.ItemPageUsingViewModel2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="This page uses non-trivial binding" />
+            <Entry HorizontalOptions="FillAndExpand" Text="{Binding Title}" />
+            <Button
+                Clicked="DisplayButtonClicked"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Display Item Value"
+                VerticalOptions="Fill" />
+            <Button
+                Clicked="UpdateButtonClicked"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Update the Data Model"
+                VerticalOptions="Fill" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
